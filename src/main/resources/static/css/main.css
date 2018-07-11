@@ -73,55 +73,54 @@ a:after {
 .navbar {
 	text-transform: uppercase;
 	margin-bottom: 0px;
-}
-
-.navbar-inverse {
 	padding-bottom: 50px;
 	padding-top: 50px;
 	background-color: #1abc9c;
 	border-color: #16a085;
-}
-
-.navbar-inverse .navbar-nav > li > a {
 	color: white;
 }
 
-.navbar-inverse .navbar-nav > li > a:hover {
-	color: #222222;
+.navbar a {
+	color: white;
 }
 
 .navbar-brand {
 	font-weight: 700;
 	font-size: 20px;
 	letter-spacing: 2px;
+	padding-left: 11rem;
 }
 
-.navbar-inverse .navbar-brand {
-	color: white;
+.navbar > div {
+	padding-right: 11rem;
+}
+
+/* Form */
+#secret-form {
+	width: 40%;
+	display: grid;
+	margin: auto;
+}
+
+#secret-form .form-group {
+	text-align: left;
+}
+
+#error-msg {
+	color: red;
 }
 
 /* Helpers */
-
-.mt {
-	margin-top: 40px;
-	margin-bottom: 40px;
-}
-
-.mt-0 {
-	margin-top: 0px;
-}
-
-.mb-0 {
-	margin-bottom: 0px;
-}
-
-.pt {
+.ptb {
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
 
-/* Wrap */
+.pb {
+	padding-bottom: 50px;
+}
 
+/* Wrap */
 #ww {
 	padding-top: 50px;
 	padding-bottom: 50px;
@@ -138,7 +137,7 @@ a:after {
 	color: white;
 }
 
-#footer h4 {
+#footer h6 {
 	color: white;
 	text-transform: uppercase;
 	padding-bottom: 20px;
