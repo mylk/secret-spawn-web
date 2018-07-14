@@ -1,7 +1,10 @@
 package io.github.mylk.secretspawnweb.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +25,15 @@ public class HomeController {
     }
 
     @PostMapping("/")
-    public String generate(@ModelAttribute SecretPreferences secretPreferences, Model model) {
+    public String generate(@Valid @ModelAttribute SecretPreferences secretPreferences,
+            BindingResult bindingResult, Model model) {
+        if (bindingResult.hasErrors()) {
+            String validationError = String.format("Field \"%s\" %s", bindingResult.getFieldError().getField(),
+                bindingResult.getFieldError().getDefaultMessage());
+            model.addAttribute("error", validationError);
+            return "result";
+        }
+
         String[] args = new String[]{
             "-length", secretPreferences.getLength().toString(),
             "-source", secretPreferences.getSource(),

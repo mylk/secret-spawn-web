@@ -1,9 +1,18 @@
 package io.github.mylk.secretspawnweb.model;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
 public class SecretPreferences {
 
+    @NotNull
+    @Min(8)
     private Integer length;
+
+    @NotNull
     private String source;
+
+    @NotNull
     private String format;
 
     public Integer getLength() {

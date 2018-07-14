@@ -120,6 +120,10 @@ a:after {
 	padding-bottom: 50px;
 }
 
+.pt {
+	padding-top: 50px;
+}
+
 /* Wrap */
 #ww {
 	padding-top: 50px;

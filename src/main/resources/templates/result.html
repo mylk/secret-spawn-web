@@ -7,9 +7,10 @@
 
 <div th:insert="~{layout :: ww}"></div>
 
+<div th:if="${error}" th:insert="~{layout :: error}"></div>
+
 <div th:insert="~{layout :: form}"></div>
 
-<div th:if="${error}" th:insert="~{layout :: error}"></div>
 <div th:unless="${error}" th:insert="~{layout :: result}"></div>
 
 <div th:insert="~{layout :: footer}"></div>
