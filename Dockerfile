@@ -5,4 +5,6 @@ EXPOSE 8080
 ADD . /secret-spawn-web
 WORKDIR /secret-spawn-web
 
-CMD ["./gradlew", "bootRun"]
+RUN ./gradlew build
+
+CMD ["./start.sh"]
