@@ -1,4 +1,6 @@
-FROM openjdk:8
+FROM alpine
+
+RUN apk add openjdk8
 
 EXPOSE 8080
 
